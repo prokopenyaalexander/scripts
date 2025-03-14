@@ -3,7 +3,7 @@ import csv
  
 directory = ''
 
-def find_mp3(directory, prefix=""):
+def find_file(directory, prefix=""):
 
     items = os.listdir(directory)
     items.sort()
@@ -27,4 +27,4 @@ def find_mp3(directory, prefix=""):
         for element in files:
             writer.writerow({'Title': element})
 
-find_mp3(directory)
+find_file(directory)
