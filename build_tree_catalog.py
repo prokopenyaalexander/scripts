@@ -1,7 +1,7 @@
 import os
 import sys
  
-directory = ''
+directory = 'E:\Музыка'
 
 
 def build_tree(directory, prefix=""):
@@ -56,10 +56,10 @@ def build_tree_(directory, prefix=""):
                 
             build_tree_(path, prefix + new_prefix)
 
-    with open("tree.txt", "w", encoding="utf-8") as f:
-        sys.stdout = f
-        build_tree_(directory)
+with open("tree.txt", "w", encoding="utf-8") as f:
+    sys.stdout = f
+    build_tree_(directory)
 
 
-build_tree(directory)
-build_tree_(directory)
+# build_tree(directory)
+# build_tree_(directory)
